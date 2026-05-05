@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EMO.fm - Radio Chrétienne</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+
+<meta name="theme-color" content="#7A4E2D">
+</head>
+
+<body>
+
+<header class="header">
+    <h1>EMO.fm</h1>
+    <p>Devançons l’Aurore • Radio Chrétienne</p>
+</header>
+
+<!-- 🔴 LIVE SECTION -->
+<section class="live-card">
+    <h2>🔴 EN DIRECT</h2>
+
+    <audio controls autoplay>
+        <source src="https://TON-LIEN-GOCAST-ICI" type="audio/mpeg">
+    </audio>
+
+    <p class="status">Diffusion en cours...</p>
+</section>
+
+<!-- 🎛️ NAV BUTTONS -->
+<section class="nav">
+    <button onclick="showTab('live')">📡 Live</button>
+    <button onclick="showTab('priere')">🙏 Prière</button>
+    <button onclick="showTab('programme')">📅 Programme</button>
+</section>
+
+<!-- 📄 CONTENT -->
+<section id="live" class="tab active">
+    <h3>📡 Live</h3>
+    <p>Vous écoutez EMO.fm en direct. Louange, adoration et enseignement.</p>
+</section>
+
+<section id="priere" class="tab">
+    <h3>🙏 Prière</h3>
+    <p>Un espace de connexion spirituelle. Nous croyons à la puissance de la prière.</p>
+</section>
+
+<section id="programme" class="tab">
+    <h3>📅 Programme</h3>
+    <p>• 04h–05h : Devotion matinale<br>
+       • 12h : Intercession<br>
+       • 20h : Louange & enseignement</p>
+</section>
+
+<footer>
+    <p>© 2026 EMO.fm</p>
+</footer>
+
+<script>
+function showTab(tabId) {
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
